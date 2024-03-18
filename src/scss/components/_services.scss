@@ -1,0 +1,143 @@
+.services {
+  &__title {
+    margin-bottom: 48px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(2, 595px);
+    gap: 10px;
+  }
+
+  &__item {
+    // min-height: 268px;
+    padding: 70px 0 51px 52px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 3px;
+    overflow: hidden;
+    transition: filter 0.3s ease-in-out;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-repeat: no-repeat;
+      background-size: cover;
+      object-fit: cover;
+    }
+
+    &::after {
+      background: linear-gradient(90.45deg, #FFFFFF 47.56%, rgba(255, 255, 255, 0) 98.81%);
+    }
+
+    &--1 {
+      &::before {
+        background-image: url('../img/services/services-1.jpg');
+      }
+    }
+
+    &--2 {
+      &::before {
+        background-image: url('../img/services/services-2.jpg');
+      }
+    }
+
+    &--3 {
+      &::before {
+        background-image: url('../img/services/services-3.jpg');
+      }
+    }
+
+    &--4 {
+      &::before {
+        background-image: url('../img/services/services-4.jpg');
+      }
+    }
+
+    &:hover {
+      .services__btn > svg {
+        fill: var(--orange-color);
+      }
+
+      filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
+      transition: filter 0.3s ease-in-out;
+      cursor: pointer;
+    }
+  }
+
+  &__item-subtitle {
+    max-width: 294px;
+    margin: 0;
+    position: relative;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+    margin-bottom: 25px;
+    padding-left: 88px;
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    &--1 {
+      &::before {
+        content: url('../img/services/services-1.svg');
+      }
+    }
+
+    &--2 {
+      &::before {
+        content: url('../img/services/services-2.svg');
+      }
+    }
+
+    &--3 {
+      &::before {
+        content: url('../img/services/services-3.svg');
+      }
+    }
+
+    &--4 {
+      &::before {
+        content: url('../img/services/services-4.svg');
+      }
+    }
+  }
+
+  &__item-text {
+    margin: 0;
+    max-width: 300px;
+  }
+
+  &__btn {
+    position: absolute;
+    right: 29px;
+    bottom: 27px;
+
+    &:hover {
+      .services__btn-svg {
+        fill: var(--orange-color);
+      }
+    }
+  }
+
+  &__btn-svg {
+    fill: var(--light-color);
+    width: 38px;
+    height: 30px;
+    transition: fill 0.3s ease-in-out;
+  }
+}

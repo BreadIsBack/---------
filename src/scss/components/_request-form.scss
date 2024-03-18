@@ -1,0 +1,124 @@
+.request-form {
+  max-width: 406px;
+  padding: 43px 40px 66px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  background-color: var(--light-color);
+
+  &__title {
+    margin: 0;
+    margin-bottom: 27px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--main-color);
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__input {
+    padding: 12px 0 12px 16px;
+    border: none;
+    width: 100%;
+    height: 40px;
+    border-radius: 3px;
+    background-color: #e2e2e2;
+    outline: transparent;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--main-color);
+
+    &::placeholder {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--main-color);
+    }
+  }
+
+  &__checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__checkbox-text {
+    display: inline-block;
+    padding-left: 35px;
+    position: relative;
+    margin: 0;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--dark-color);
+
+    a {
+      color: #4b67af;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      z-index: 1;
+      top: 50%;
+      left: 0;
+      width: 25px;
+      height: 25px;
+      transform: translateY(-50%);
+      background-color: #e2e2e2;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      left: 6px;
+      bottom: 6px;
+      width: 21px;
+      height: 21px;
+      opacity: 0;
+      background-image: url('../img/arrow.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      transition: opacity 0.3s ease-in-out;
+    }
+  }
+
+  &__input-check {
+    position: absolute;
+    opacity: 0;
+  }
+
+  &__input-check:checked+&__checkbox-text::after {
+    opacity: 1;
+    z-index: 2;
+    cursor: pointer;
+  }
+
+  &__btn {
+    padding: 19px 40px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    color: var(--light-color);
+    background-color: var(--orange-color);
+    transition: box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+  }
+}
