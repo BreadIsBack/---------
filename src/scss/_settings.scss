@@ -125,16 +125,21 @@ a {
 }
 
 .btn {
-  position: relative;
-  padding: 12px 19px 13px 47px;
   border-radius: 3px;
-  width: 170px;
-  height: 40px;
   font-weight: 700;
-  font-size: 13px;
-  line-height: 15px;
   color: var(--light-color);
   transition: box-shadow 0.3s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s ease-in-out;
+  }
+}
+
+.btn-action {
+  position: relative;
+  padding: 12px 19px 13px 47px;
+  font-size: 13px;
 
   &::before {
     position: absolute;
@@ -164,15 +169,11 @@ a {
       background-image: url('../img/btn-cost.svg');
     }
   }
-
-  &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    transition: box-shadow 0.3s ease-in-out;
-  }
 }
 
 .subtitle {
   margin: 0;
+  margin-bottom: 45px;
   font-weight: 700;
   font-size: 24px;
   line-height: 28px;

@@ -1,0 +1,130 @@
+.about {
+
+}
+
+.about-panel {
+
+  &__top {
+    margin-bottom: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--light-color);
+  }
+
+  &__info {
+    margin: 0 50px;
+  }
+
+  &__logo {
+    margin-bottom: 61px;
+  }
+
+  &__descr {
+    margin: 0;
+    margin-left: 200px;
+    max-width: 315px;
+  }
+
+  &__video {
+    width: 50%;
+  }
+
+  &__advantages {
+    margin-bottom: 82px;
+    padding: 0 42px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-content: center;
+  }
+
+  &__item {
+    padding-left: 120px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    &--1 {
+      &::before {
+        width: 87px;
+        height: 80px;
+        background-image: url('../img/about/1.svg');
+      }
+    }
+
+    &--2 {
+      &::before {
+        width: 112px;
+        height: 80px;
+        background-image: url('../img/about/2.svg');
+      }
+    }
+
+    &--3 {
+      &::before {
+        width: 82px;
+        height: 94px;
+        background-image: url('../img/about/3.svg');
+      }
+    }
+
+    &--4 {
+      &::before {
+        width: 87px;
+        height: 80px;
+        background-image: url('../img/about/4.svg');
+      }
+    }
+
+    &--5 {
+      &::before {
+        width: 82px;
+        height: 82px;
+        background-image: url('../img/about/5.svg');
+      }
+    }
+
+    &--6 {
+      &::before {
+        width: 81px;
+        height: 99px;
+        background-image: url('../img/about/6.svg');
+      }
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__btn {
+    display: block;
+    margin: 0 auto;
+    font-weight: 700;
+    font-size: 16px;
+    padding-left: 76px;
+    padding-right: 54px;
+
+    &::before {
+      left: 25px;
+    }
+  }
+}

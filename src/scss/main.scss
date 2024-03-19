@@ -9,8 +9,13 @@
 @import "./components/hero";
 @import "./components/services";
 @import "./components/services-modal";
+@import "./components/products";
+@import "./components/quality";
+@import "./components/about";
 
 // подключения маленьких компонентов страницы
 @import "./components/nav";
+@import "./components/modals-btn";
 @import "./components/request-form";
 @import "./components/modals";
+@import "./components/tabs";

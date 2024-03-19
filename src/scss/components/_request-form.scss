@@ -109,16 +109,8 @@
 
   &__btn {
     padding: 19px 40px;
-    font-weight: 700;
+    z-index: 1;
     font-size: 14px;
-    line-height: 16px;
-    color: var(--light-color);
     background-color: var(--orange-color);
-    transition: box-shadow 0.3s ease-in-out;
-
-    &:hover {
-      box-shadow: 0 0 10px rgba(0,0,0,0.5);
-      transition: box-shadow 0.3s ease-in-out;
-    }
   }
 }

@@ -21,13 +21,4 @@
     margin-right: auto;
   }
 
-  &__buttons-list {
-    display: flex;
-  }
-
-  &__buttons-item {
-    &:not(:last-child) {
-      margin-right: 14px;
-    }
-  }
 }
