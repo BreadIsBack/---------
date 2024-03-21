@@ -1,5 +1,6 @@
 .products {
   margin-bottom: 55px;
+
   &__title {
     text-align: center;
   }
@@ -45,21 +46,6 @@
 
   &__subtitle {
     margin: 0;
-  }
-
-  &__prev,
-  &__next {
-    color: var(--dark-color);
-    transition: color 0.3s ease-in-out;
-
-    &:disabled {
-      color: #8f8f8f;
-    }
-
-    &:hover {
-      color: var(--orange-color);
-      transition: color 0.3s ease-in-out;
-    }
   }
 
   &__prev {

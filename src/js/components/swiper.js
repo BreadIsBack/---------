@@ -32,4 +32,37 @@ const productsSlider = new Swiper('.products-swiper', {
   },
 });
 
-console.log(document.querySelector('.swiper-button-prev'));
+const reviewPanelSlider = new Swiper('.review-panel__swiper', {
+  slidesPerView: 1,
+  navigation: {
+    prevEl: '.review-panel__prev',
+    nextEl: '.review-panel__next',
+    clickable: true,
+  },
+});
+
+const certificatelSlider = new Swiper('.certificate-panel__swiper', {
+  slidesPerView: 1,
+  navigation: {
+    prevEl: '.certificate-panel__prev',
+    nextEl: '.certificate-panel__next',
+    clickable: true,
+  },
+});
+
+const portfolioSlider = new Swiper('.portfolio__swiper', {
+  slidesPerView: 1,
+  navigation: {
+    prevEl: '.portfolio__btn-prev',
+    nextEl: '.portfolio__btn-next',
+    clickable: true,
+  },
+});
+
+const portfolioInnerSlider = new Swiper('.portfolio-modal__swiper', {
+  slidesPerView: 1,
+  pagination: {
+    el: '.portfolio-modal__pagination',
+    clickable: true,
+  },
+});

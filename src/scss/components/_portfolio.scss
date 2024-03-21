@@ -1,0 +1,144 @@
+.portfolio {
+  padding-top: 50px;
+  background-color: var(--light-color);
+
+  &__swiper {
+    margin-bottom: 62px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 214px);
+    gap: 44px;
+    justify-content: center;
+  }
+
+  &__link {
+    display: block;
+    height: 100%;
+    border-radius: 3px;
+    transition: box-shadow 0.3s ease-in-out;
+
+    img {
+      height: 100%;
+    }
+
+    &:hover {
+      box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+  }
+
+  &__map {
+    &--modal {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+}
+
+.portfolio-modal {
+  &__action {
+    padding-bottom: 311px;
+    margin-bottom: 30px;
+    display: flex;
+  }
+
+  &__swiper {
+    margin: 0;
+    margin-right: 60px;
+    max-width: 360px;
+  }
+
+  &__about {
+
+  }
+
+  &__info {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__date {
+    margin-right: 27px;
+    font-size: 14px;
+    color: #9494a8;
+  }
+
+  &__address {
+    margin: 0;
+    padding-left: 41px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 30px;
+      height: 39px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('../img/portfolio/inner/icon.svg');
+    }
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    color: var(--dark-color);
+  }
+
+  &__list {
+    margin-bottom: 25px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__subtitle {
+    margin: 0;
+  }
+
+  &__text {
+    margin: 0;
+  }
+
+  &__btn {
+    &:not(:last-child) {
+      margin-right: 15px;
+    }
+
+    &--cost {
+      &::before {
+        width: 29px;
+        height: 19px;
+        background-image: url('../img/portfolio/inner/cost.svg');
+      }
+    }
+  }
+}
+
+.portfolio-modal__pagination.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0;
+}
+
+.portfolio-modal__pagination .swiper-pagination-bullet {
+  border: 1px solid #9494A8;
+}
+
+#first_map,
+#second_map {
+  width: 100%;
+  min-height: 300px;
+}

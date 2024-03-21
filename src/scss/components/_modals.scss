@@ -1,4 +1,37 @@
 .graph-modal {
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.5);
+
+  &__container {
+    padding: 50px 110px;
+
+    &--action {
+      padding: 0;
+      max-width: 595px;
+    }
+
+    &--portfolio {
+      padding: 49px 85px 0 85px;
+    }
+  }
+
+  &__content {
+    &--action {
+      max-width: 595px;
+    }
+  }
+
+  &__close {
+    top: 33px;
+    right: 31px;
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+
+    &--action {
+      width: 21px;
+      height: 21px;
+      background-image: url('../img/close.svg');
+    }
+  }
 }

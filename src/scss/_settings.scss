@@ -171,6 +171,16 @@ a {
   }
 }
 
+.btn-swiper {
+  color: var(--dark-color);
+    transition: color 0.3s ease-in-out;
+
+    &:not([disabled]):hover {
+      color: var(--orange-color);
+      transition: color 0.3s ease-in-out;
+    }
+}
+
 .subtitle {
   margin: 0;
   margin-bottom: 45px;

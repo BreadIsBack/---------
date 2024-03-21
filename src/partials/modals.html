@@ -37,10 +37,10 @@
               </p>
               <ul class="modals-btn-list list-reset">
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--orange btn-reset">Заявка на замер</button>
+                  <button class="btn btn-action btn-action--orange btn-reset" data-graph-path="modal-action--measure">Заявка на замер</button>
                 </li>
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--blue btn-reset">Заказать расчет</button>
+                  <button class="btn btn-action btn-action--blue btn-reset" data-graph-path="modal-action--cost">Заказать расчет</button>
                 </li>
               </ul>
             </div>
@@ -129,10 +129,10 @@
               </p>
               <ul class="modals-btn-list list-reset">
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--orange btn-reset">Заявка на замер</button>
+                  <button class="btn btn-action btn-action--orange btn-reset" data-graph-path="modal-action--measure">Заявка на замер</button>
                 </li>
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--blue btn-reset">Заказать расчет</button>
+                  <button class="btn btn-action btn-action--blue btn-reset" data-graph-path="modal-action--cost">Заказать расчет</button>
                 </li>
               </ul>
             </div>
@@ -219,10 +219,10 @@
               </p>
               <ul class="modals-btn-list list-reset">
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--orange btn-reset">Заявка на замер</button>
+                  <button class="btn btn-action btn-action--orange btn-reset" data-graph-path="modal-action--measure">Заявка на замер</button>
                 </li>
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--blue btn-reset">Заказать расчет</button>
+                  <button class="btn btn-action btn-action--blue btn-reset" data-graph-path="modal-action--cost">Заказать расчет</button>
                 </li>
               </ul>
             </div>
@@ -308,10 +308,10 @@
               </p>
               <ul class="modals-btn-list list-reset">
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--orange btn-reset">Заявка на замер</button>
+                  <button class="btn btn-action btn-action--orange btn-reset" data-graph-path="modal-action--measure">Заявка на замер</button>
                 </li>
                 <li class="modals-btn-list__item">
-                  <button class="btn btn-action btn-action--blue btn-reset">Заказать расчет</button>
+                  <button class="btn btn-action btn-action--blue btn-reset" data-graph-path="modal-action--cost">Заказать расчет</button>
                 </li>
               </ul>
             </div>
@@ -354,6 +354,160 @@
               </p>
             </li>
           </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--action" role="dialog" aria-modal="true" data-graph-target="modal-action--measure">
+    <button class="btn-reset js-modal-close graph-modal__close graph-modal__close--action" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content graph-modal__content--action">
+      <form class="action-form action-form--measure">
+        <h2 class="action-form__title action-form__title--measure">Вызвать замершика на дом</h2>
+        <div class="action-form__inner">
+          <label class="action-form__label">
+            <input type="text" class="action-form__input" placeholder="Ваше имя" required>
+          </label>
+          <label class="action-form__label">
+            <input type="tel" class="action-form__input" placeholder="Номер телефона" required>
+          </label>
+          <label class="action-form__label">
+            <input type="email" class="action-form__input" placeholder="E-mail" required>
+          </label>
+          <div class="action-form__checkbox">
+            <label class="action-form__label-check">
+              <input type="checkbox" class="action-form__input-check" required>
+              <p class="action-form__checkbox-text action-form__checkbox-text--measure">
+                Я согласен(на) на обработку <a href="#">персональных данных</a>
+              </p>
+            </label>
+          </div>
+          <button class="action-form__btn action-form__btn--orange btn btn-reset">Отправить заявку</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--action" role="dialog" aria-modal="true" data-graph-target="modal-action--cost">
+    <button class="btn-reset js-modal-close graph-modal__close graph-modal__close--action" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content graph-modal__content--action">
+      <form class="action-form action-form--cost">
+        <h2 class="action-form__title action-form__title--cost">Вызвать замершика на дом</h2>
+        <div class="action-form__inner">
+          <label class="action-form__label">
+            <input type="text" class="action-form__input" placeholder="Ваше имя" required>
+          </label>
+          <label class="action-form__label">
+            <input type="tel" class="action-form__input" placeholder="Номер телефона" required>
+          </label>
+          <label class="action-form__label">
+            <input type="email" class="action-form__input" placeholder="E-mail" required>
+          </label>
+          <div class="action-form__checkbox">
+            <label class="action-form__label-check">
+              <input type="checkbox" class="action-form__input-check" required>
+              <p class="action-form__checkbox-text action-form__checkbox-text--cost">
+                Я согласен(на) на обработку <a href="#">персональных данных</a>
+              </p>
+            </label>
+          </div>
+          <button class="action-form__btn action-form__btn--blue btn btn-reset">Заказать расчет</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--action" role="dialog" aria-modal="true" data-graph-target="modal-action--review">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content graph-modal__content--action">
+      <form class="action-form action-form--review">
+        <h2 class="action-form__title action-form__title--review">Вызвать замершика на дом</h2>
+        <div class="action-form__inner">
+          <label class="action-form__label">
+            <input type="text" class="action-form__input" placeholder="Ваше имя" required>
+          </label>
+          <label class="action-form__label">
+            <input type="tel" class="action-form__input" placeholder="Номер телефона" required>
+          </label>
+          <label class="action-form__label">
+            <input type="email" class="action-form__input" placeholder="E-mail" required>
+          </label>
+          <label class="action-form__label">
+            <!-- <input type="text" class="action-form__input action-form__input--review" placeholder="Ваш отзыв" required> -->
+            <textarea class="action-form__input action-form__input-textarea" placeholder="Ваш отзыв" required></textarea>
+          </label>
+          <div class="action-form__checkbox">
+            <label class="action-form__label-check">
+              <input type="checkbox" class="action-form__input-check" required>
+              <p class="action-form__checkbox-text action-form__checkbox-text--review">
+                Я согласен(на) на обработку <a href="#">персональных данных</a>
+              </p>
+            </label>
+          </div>
+          <button class="action-form__btn action-form__btn--review btn btn-reset">Оставить отзыв</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--portfolio" role="dialog" aria-modal="true" data-graph-target="portfolio-item-1">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="portfolio-modal">
+        <div class="portfolio-modal__container">
+          <div class="portfolio-modal__action">
+            <div class="swiper portfolio-modal__swiper">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="img/portfolio/inner/1.jpg" alt="Пластиковое окно в доме"
+                    class="portfolio-modal__image">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/portfolio/inner/1.jpg" alt="Пластиковое окно в доме"
+                    class="portfolio-modal__image">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/portfolio/inner/1.jpg" alt="Пластиковое окно в доме"
+                    class="portfolio-modal__image">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/portfolio/inner/1.jpg" alt="Пластиковое окно в доме"
+                    class="portfolio-modal__image">
+                </div>
+                <div class="swiper-slide">
+                  <img src="img/portfolio/inner/1.jpg" alt="Пластиковое окно в доме"
+                    class="portfolio-modal__image">
+                </div>
+              </div>
+              <div class="portfolio-modal__pagination"></div>
+            </div>
+            <div class="portfolio-modal__about">
+              <div class="portfolio-modal__info">
+                <time class="portfolio-modal__date" datetime="2021-08-10">08.10.2021</time>
+                <p class="portfolio-modal__address">
+                  г Иваново,  ул Ташкентская, д 4 к 1
+                </p>
+              </div>
+              <h2 class="portfolio-modal__title">
+                Монтаж окна и балконного блока
+              </h2>
+              <ul class="portfolio-modal__list list-reset">
+                <li class="portfolio-modal__item">
+                  <h4 class="portfolio-modal__subtitle">Что делали:</h4>
+                  <p class="portfolio-modal__text">
+                    Профильная система Rehau Blitz Фурнитура Roto NT
+                  </p>
+                </li>
+                <li class="portfolio-modal__item">
+                  <h4 class="portfolio-modal__subtitle">Категории объекта:</h4>
+                  <p class="portfolio-modal__text">Окна Балконный блок</p>
+                </li>
+              </ul>
+              <button class="btn btn-action portfolio-modal__btn btn-action--orange btn-reset" data-graph-path="modal-action--measure">Заявка на замер</button>
+              <button class="btn btn-action portfolio-modal__btn portfolio-modal__btn--cost btn-action--blue btn-reset" data-graph-path="modal-action--cost">Узнать цену</button>
+            </div>
+          </div>
+          <div id="second_map" class="portfolio__map portfolio__map--modal"></div>
         </div>
       </div>
     </div>
