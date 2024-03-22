@@ -13,11 +13,14 @@
 @import "./components/quality";
 @import "./components/about";
 @import "./components/portfolio";
+@import "./components/questions";
+@import "./components/contacts";
+@import "./components/footer";
 
 // подключения маленьких компонентов страницы
 @import "./components/nav";
 @import "./components/modals-btn";
 @import "./components/request-form";
+@import "./components/action-form";
 @import "./components/modals";
 @import "./components/tabs";
-@import "./components/action-form";

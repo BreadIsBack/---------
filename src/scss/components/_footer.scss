@@ -1,0 +1,42 @@
+.footer {
+  padding: 55px 0;
+  background-color: var(--main-color);
+
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__copyright {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    margin-right: 22px;
+  }
+
+  &__copy-text {
+    margin: 0;
+    line-height: 125%;
+    color: var(--light-color);
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    line-height: 257%;
+    color: var(--light-color);
+  }
+}
