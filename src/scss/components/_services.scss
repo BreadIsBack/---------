@@ -1,14 +1,14 @@
 .services {
   margin-bottom: 103px;
 
-  &__title {
-    text-align: center;
-  }
-
   &__list {
     display: grid;
-    grid-template-columns: repeat(2, 595px);
+    grid-template-columns: repeat(2, 1fr);
     gap: 10px;
+
+    @include small-tablet {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -127,18 +127,17 @@
     position: absolute;
     right: 29px;
     bottom: 27px;
+    color: var(--light-color);
+    transition: color 0.3s ease-in-out;
 
     &:hover {
-      .services__btn-svg {
-        fill: var(--orange-color);
-      }
+      color: var(--orange-color);
     }
   }
 
   &__btn-svg {
-    fill: var(--light-color);
     width: 38px;
     height: 30px;
-    transition: fill 0.3s ease-in-out;
+    fill: currentColor;
   }
 }

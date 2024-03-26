@@ -3,35 +3,38 @@
     <a href="#" class="logo header__logo">
       <img src="img/logo.png" alt="Логотип сайта Окна Хаус" class="logo__img">
     </a>
-    <nav class="nav header__nav">
+    <nav class="nav header__nav" data-menu>
       <ul class="nav__list list-reset">
-        <li class="nav__item">
-          <a href="#" class="nav__link link">Услуги</a>
+        <li class="nav__item" data-menu-item>
+          <a href="#services" class="nav__link link">Услуги</a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link link">Продукция</a>
+        <li class="nav__item" data-menu-item>
+          <a href="#products" class="nav__link link">Продукция</a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link link">О компании</a>
+        <li class="nav__item" data-menu-item>
+          <a href="#about" class="nav__link link">О компании</a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link link">Портфолио</a>
+        <li class="nav__item" data-menu-item>
+          <a href="#portfolio" class="nav__link link">Портфолио</a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link link">Вопрос-ответ</a>
+        <li class="nav__item" data-menu-item>
+          <a href="#questions" class="nav__link link">Вопрос-ответ</a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__link link">Контакты</a>
+        <li class="nav__item" data-menu-item>
+          <a href="#contacts" class="nav__link link">Контакты</a>
         </li>
       </ul>
     </nav>
-    <ul class="header__buttons modals-btn-list list-reset">
-      <li class="header__buttons-item modals-btn-list__item">
+    <ul class="header__buttons list-reset" data-header-btns>
+      <li class="header__buttons-item">
         <button class="btn btn-action btn-action--orange btn-reset header__buttons-btn" data-graph-path="modal-action--measure">Заявка на замер</button>
       </li>
-      <li class="header__buttons-item modals-btn-list__item">
+      <li class="header__buttons-item">
         <button class="btn btn-action btn-action--blue btn-reset header__buttons-btn" data-graph-path="modal-action--cost">Заказать расчет</button>
       </li>
     </ul>
+    <button class="burger btn-reset" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>

@@ -10,14 +10,24 @@
   background-blend-mode: multiply;
 
   &__container {
-    padding: 65px 0 69px;
+    padding-top: 65px;
+    padding-bottom: 70px;
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__info {
     margin-right: 52px;
+
+    @include small-tablet {
+      margin: 0;
+      margin-bottom: 30px;
+    }
   }
 
   &__info-title {
@@ -28,6 +38,10 @@
     font-size: 36px;
     line-height: 42px;
     color: var(--light-color);
+
+    @include mobile {
+      font-size: 24px;
+    }
   }
 
   &__info-subtitle {
@@ -36,12 +50,23 @@
     font-size: 24px;
     line-height: 28px;
     color: var(--orange-color);
+
+    @include mobile {
+      font-size: 18px;
+    }
   }
 
   &__info-list {
-    display: flex;
-    align-items: center;
-    gap: 40px;
+    // display: flex;
+    // align-items: center;
+    // gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 40px;
+
+    @include mobile-small {
+      column-gap: 10px;
+    }
   }
 
   &__info-item {
@@ -82,6 +107,10 @@
     font-size: 14px;
     line-height: 18px;
     color: var(--light-color);
+
+    @include mobile {
+      font-size: 10px;
+    }
   }
 
   &__request {

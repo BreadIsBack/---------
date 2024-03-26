@@ -30,6 +30,7 @@ const productsSlider = new Swiper('.products-swiper', {
     nextEl: '.products-swiper__next',
     clickable: true,
   },
+  allowTouchMove: false,
 });
 
 const reviewPanelSlider = new Swiper('.review-panel__swiper', {
@@ -39,6 +40,7 @@ const reviewPanelSlider = new Swiper('.review-panel__swiper', {
     nextEl: '.review-panel__next',
     clickable: true,
   },
+  allowTouchMove: false,
 });
 
 const certificatelSlider = new Swiper('.certificate-panel__swiper', {

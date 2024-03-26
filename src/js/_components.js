@@ -4,3 +4,4 @@ import './components/swiper';
 import './components/fancybox';
 import './components/map';
 import './components/accordion';
+import './components/smoothscroll';

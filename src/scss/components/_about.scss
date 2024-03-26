@@ -49,13 +49,6 @@ margin-bottom: 87px;
     display: block;
     border-radius: 3px;
     position: relative;
-    z-index: 1;
-
-    img {
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: left left;
-    }
 
     &::before {
       position: absolute;
@@ -98,6 +91,10 @@ margin-bottom: 87px;
     }
   }
 
+  &__video {
+    display: block;
+  }
+
 
   &__advantages {
     padding: 0 42px;
@@ -117,7 +114,6 @@ margin-bottom: 87px;
 
     &::before {
       position: absolute;
-      content: '';
       left: 0;
       background-size: contain;
       background-repeat: no-repeat;
@@ -125,49 +121,37 @@ margin-bottom: 87px;
 
     &--1 {
       &::before {
-        width: 87px;
-        height: 80px;
-        background-image: url('../img/about/about/1.svg');
+        content: url('../img/about/about/1.svg');
       }
     }
 
     &--2 {
       &::before {
-        width: 112px;
-        height: 80px;
-        background-image: url('../img/about/about/2.svg');
+        content: url('../img/about/about/2.svg');
       }
     }
 
     &--3 {
       &::before {
-        width: 82px;
-        height: 94px;
-        background-image: url('../img/about/about/3.svg');
+        content: url('../img/about/about/3.svg');
       }
     }
 
     &--4 {
       &::before {
-        width: 87px;
-        height: 80px;
-        background-image: url('../img/about/about/4.svg');
+        content: url('../img/about/about/4.svg');
       }
     }
 
     &--5 {
       &::before {
-        width: 82px;
-        height: 82px;
-        background-image: url('../img/about/about/5.svg');
+        content: url('../img/about/about/5.svg');
       }
     }
 
     &--6 {
       &::before {
-        width: 81px;
-        height: 99px;
-        background-image: url('../img/about/about/6.svg');
+        content: url('../img/about/about/6.svg');
       }
     }
   }
@@ -189,6 +173,7 @@ margin-bottom: 87px;
   padding-top: 68px;
   padding-bottom: 108px;
   background-color: var(--light-color);
+
   &__title {
     margin-bottom: 71px;
     text-align: center;
@@ -221,7 +206,6 @@ margin-bottom: 87px;
       width: 100px;
       height: 100px;
       position: absolute;
-      content: '';
       top: 0;
       left: 50%;
       transform: translateX(-50%);
@@ -231,25 +215,25 @@ margin-bottom: 87px;
 
     &--1 {
       &::before {
-        background-image: url('../img/about/work/1.svg');
+        content: url('../img/about/work/1.svg');
       }
     }
 
     &--2 {
       &::before {
-        background-image: url('../img/about/work/2.svg');
+        content: url('../img/about/work/2.svg');
       }
     }
 
     &--3 {
       &::before {
-        background-image: url('../img/about/work/3.svg');
+        content: url('../img/about/work/3.svg');
       }
     }
 
     &--4 {
       &::before {
-        background-image: url('../img/about/work/4.svg');
+        content: url('../img/about/work/4.svg');
       }
     }
   }

@@ -1,13 +1,25 @@
 .nav {
   &__list {
     display: flex;
+    height: 100%;
     align-items: center;
+
+    @include mini-desktop {
+      // padding-top: 50px;
+      flex-direction: column;
+      justify-content: space-between;
+    }
   }
 
   &__item {
-
     &:not(:last-child) {
       margin-right: 30px;
+    }
+
+    @include mini-desktop {
+      &:not(:last-child) {
+        margin-right: 0;
+      }
     }
   }
 
@@ -34,6 +46,12 @@
       &::before {
         transform: scale(1);
         transition: transform 0.3s ease-in-out;
+      }
+    }
+
+    @include mini-desktop {
+      &::before {
+        top: -20px;
       }
     }
   }

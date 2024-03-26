@@ -20,9 +20,12 @@ html {
   min-height: 100%;
   font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
   color: var(--main-color);
   background-color: #f2f2f2;
+
+  @include mobile {
+    font-size: 12px;
+  }
 }
 
 img {
@@ -143,9 +146,6 @@ a {
 
   &::before {
     position: absolute;
-    content: '';
-    width: 20px;
-    height: 18px;
     top: 50%;
     left: 13px;
     transform: translateY(-50%);
@@ -158,7 +158,7 @@ a {
     background-color: var(--orange-color);
 
     &::before {
-      background-image: url('../img/btn-measure.svg');
+      content: url('../img/btn-measure.svg');
     }
   }
 
@@ -166,7 +166,16 @@ a {
     background-color: var(--blue-color);
 
     &::before {
-      background-image: url('../img/btn-cost.svg');
+      content: url('../img/btn-cost.svg');
+    }
+  }
+
+  @include mobile {
+    padding: 10px;
+    font-size: 10px;
+
+    &::before {
+      display: none;
     }
   }
 }
@@ -188,4 +197,101 @@ a {
   font-size: 24px;
   line-height: 28px;
   color: var(--main-color);
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.burger {
+  --burger-width: 40px;
+  --burger-height: 20px;
+  --burger-line-height: 2px;
+
+  display: none;
+  width: var(--burger-width);
+  height: var(--burger-height);
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  z-index: 1000;
+  border: none;
+  padding: 0;
+  transform: translateY(-50%);
+  color: var(--dark-color);
+  background-color: transparent;
+  cursor: pointer;
+
+  @include mini-desktop {
+    display: block;
+  }
+}
+
+.burger::before,
+.burger::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger::before {
+  top: 0;
+}
+
+.burger::after {
+  top: calc(100% - var(--burger-line-height));
+}
+
+.burger__line {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  height: var(--burger-line-height);
+  background-color: currentColor;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger--active::before {
+  top: 50%;
+  transform: rotate(45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active::after {
+  top: 50%;
+  transform: rotate(-45deg);
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+}
+
+.burger--active .burger__line {
+  transform: scale(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+.burger:focus::after {
+  opacity: 1;
+}
+
+.overlay {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 9;
+  background-color: #fffbed;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &--active {
+    opacity: 0.5;
+    visibility: visible;
+  }
 }

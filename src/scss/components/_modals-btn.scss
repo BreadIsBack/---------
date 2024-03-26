@@ -5,5 +5,12 @@
     &:not(:last-child) {
       margin-right: 14px;
     }
+
+    @include mobile {
+      &:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
+    }
   }
 }
