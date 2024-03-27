@@ -40,16 +40,10 @@ const reviewPanelSlider = new Swiper('.review-panel__swiper', {
     nextEl: '.review-panel__next',
     clickable: true,
   },
-  allowTouchMove: false,
 });
 
 const certificatelSlider = new Swiper('.certificate-panel__swiper', {
   slidesPerView: 1,
-  navigation: {
-    prevEl: '.certificate-panel__prev',
-    nextEl: '.certificate-panel__next',
-    clickable: true,
-  },
 });
 
 const portfolioSlider = new Swiper('.portfolio__swiper', {

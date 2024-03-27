@@ -66,11 +66,16 @@
     &:hover {
       .services__btn > svg {
         fill: var(--orange-color);
+        transition: fill 0.3s ease-in-out;
       }
 
       filter: drop-shadow(0px 4px 10px rgba(0, 0, 0, 0.25));
       transition: filter 0.3s ease-in-out;
       cursor: pointer;
+    }
+
+    &:focus {
+      fill: var(--orange-color);
     }
   }
 
@@ -128,10 +133,10 @@
     right: 29px;
     bottom: 27px;
     color: var(--light-color);
-    transition: color 0.3s ease-in-out;
 
-    &:hover {
-      color: var(--orange-color);
+    @include mobile {
+      right: 10px;
+      bottom: 10px;
     }
   }
 
@@ -139,5 +144,6 @@
     width: 38px;
     height: 30px;
     fill: currentColor;
+    transition: fill 0.3s ease-in-out;
   }
 }

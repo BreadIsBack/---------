@@ -3,6 +3,10 @@ margin-bottom: 87px;
 
   &__content {
     margin-bottom: 82px;
+
+    @include small-tablet {
+      margin-bottom: 35px;
+    }
   }
 
   &__btn {
@@ -16,6 +20,11 @@ margin-bottom: 87px;
     &::before {
       left: 25px;
     }
+
+    @include mobile {
+      padding: 15px;
+      font-size: 14px;
+    }
   }
 
 }
@@ -28,24 +37,50 @@ margin-bottom: 87px;
     align-items: center;
     justify-content: space-between;
     background-color: var(--light-color);
+
+    @include small-tablet {
+      flex-direction: column;
+    }
   }
 
   &__info {
+    display: flex;
+    width: 50%;
     margin: 0 50px;
+    flex-direction: column;
+    align-items: flex-end;
+
+    @include small-tablet {
+      margin: 0;
+      margin-bottom: 15px;
+      width: 100%;
+      flex-direction: row;
+    }
+  }
+
+  &__link {
+    margin-bottom: 61px;
+    align-self: flex-start;
+
+    @include small-tablet {
+      margin: 0;
+      margin-right: 10px;
+    }
   }
 
   &__logo {
-    margin-bottom: 61px;
+    @include mobile {
+      max-width: 100px;
+    }
   }
 
   &__descr {
     margin: 0;
-    margin-left: 200px;
+    margin-left: auto;
     max-width: 315px;
   }
 
   &__video-link {
-    width: 50%;
     display: block;
     border-radius: 3px;
     position: relative;
@@ -102,7 +137,7 @@ margin-bottom: 87px;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     column-gap: 30px;
     row-gap: 60px;
     justify-content: center;
@@ -192,7 +227,7 @@ margin-bottom: 87px;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 251px);
+    grid-template-columns: repeat(auto-fit, minmax(251px, 1fr));
     gap: 40px;
     justify-content: center;
   }
@@ -243,22 +278,42 @@ margin-bottom: 87px;
   padding: 56px 101px 114px 102px;
   background-color: var(--light-color);
 
+  @include small-tablet {
+    padding: 30px;
+  }
+
   &__top {
     margin-bottom: 37px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+
+    @include small-tablet {
+      margin-bottom: 15px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__author {
-    font-style: normal;
     margin-right: 60px;
     font-weight: 700;
+    font-style: normal;
+
+    @include small-tablet {
+      margin: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__list {
     margin-right: auto;
     display: flex;
     align-items: center;
+
+    @include small-tablet {
+      margin: 0;
+      margin-bottom: 10px;
+    }
   }
 
   &__item {
@@ -278,25 +333,22 @@ margin-bottom: 87px;
       margin-bottom: 20px;
     }
   }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include mini-desktop {
+      display: none;
+    }
+  }
 }
 
 .certificate-panel {
-  padding: 95px 95px;
   background-color: var(--light-color);
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(5, 192px);
+    grid-template-columns: repeat(auto-fit, 192px);
     gap: 11px;
     justify-content: center;
-  }
-
-  &__prev,
-  &__next {
-    overflow: visible;
-  }
-
-  &__prev {
-    left: 20px;
   }
 }

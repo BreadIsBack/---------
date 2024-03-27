@@ -3,11 +3,19 @@
     margin-bottom: 37px;
     display: flex;
     justify-content: center;
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
 
   &__nav-item {
     &:not(:last-child) {
       margin-right: 35px;
+
+      @include mobile {
+        margin-right: 0;
+      }
     }
   }
 

@@ -78,7 +78,7 @@
     opacity: 0;
     overflow: hidden;
     color: var(--dark-color);
-    transition: all 0.3s ease-out;
+    transition: all var(--accordion-time) ease-in-out;
   }
 
   &__inner-text {

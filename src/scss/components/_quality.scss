@@ -22,8 +22,9 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 178px 129px 196px 173px 102px;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 70px;
+    // justify-content: center;
     justify-content: center;
   }
 
@@ -80,13 +81,20 @@
   &__btn {
     display: block;
     margin: 0 auto;
-    font-weight: 700;
     font-size: 16px;
     padding-left: 76px;
     padding-right: 54px;
 
     &::before {
       left: 25px;
+    }
+
+    @include mobile {
+      font-size: 14px;
+
+      &::before {
+        display: block;
+      }
     }
   }
 }
