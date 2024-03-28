@@ -347,8 +347,16 @@ margin-bottom: 87px;
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 192px);
-    gap: 11px;
+    grid-template-columns: repeat(auto-fit, 190px);
+    gap: 10px;
     justify-content: center;
+
+    @include mini-desktop {
+      grid-template-columns: repeat(auto-fit, 100px);
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(auto-fit, 50px);
+    }
   }
 }

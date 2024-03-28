@@ -2,10 +2,18 @@
   padding: 55px 0;
   background-color: var(--main-color);
 
+  @include mobile {
+    padding: 30px 0;
+  }
+
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__copyright {
@@ -26,11 +34,20 @@
   &__list {
     display: flex;
     align-items: center;
+
+    @include mobile {
+      flex-direction: column;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin-right: 30px;
+
+      @include mobile {
+        margin-right: 0;
+        margin-bottom: 5px;
+      }
     }
   }
 
@@ -38,5 +55,10 @@
     font-size: 14px;
     line-height: 257%;
     color: var(--light-color);
+
+    @include small-tablet {
+      font-size: 12px;
+      line-height: 100%;
+    }
   }
 }

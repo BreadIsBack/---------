@@ -1,9 +1,25 @@
 .services-modal {
 
+  &__swiper-box {
+    margin-right: auto;
+
+    // @include mini-desktop {
+    //   margin-right: 5px;
+    // }
+
+    @include tablet {
+      margin-right: 5px;
+    }
+
+    @include small-tablet {
+       width: 40%;
+    }
+  }
+
   &__swiper {
     margin: 0;
-    margin-right: 90px;
-    position: relative;
+    // margin-right: 90px;
+    // position: relative;
     max-width: 307px;
   }
 
@@ -11,6 +27,10 @@
     margin-bottom: 36px;
     display: flex;
     align-items: center;
+
+    @include mobile {
+      align-items: flex-start;
+    }
   }
 
   &__about {
@@ -20,17 +40,19 @@
 
   &__title {
     margin-bottom: 20px;
+
+    @include mobile {
+      margin-bottom: 10px;
+    }
   }
 
   &__text {
     margin: 0;
     margin-bottom: 25px;
     max-width: 300px;
-  }
 
-  &__btn {
-    &:not(:last-child) {
-      margin-right: 15px;
+    @include mobile {
+      margin-bottom: 10px;
     }
   }
 
@@ -38,6 +60,10 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 42px 24px;
+
+    @include mobile {
+      grid-template-columns: repeat(1, 1fr);
+    }
   }
 
   &__item {
@@ -116,12 +142,18 @@
   z-index: 1;
 }
 
-.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
   &:not(:last-child) {
-    margin-right: 12px;
+    margin: 0;
+    margin-right: 11px;
   }
 }
 
+.swiper-pagination-bullets {
+  @include mobile {
+    display: none;
+  }
+}
 
 .swiper-pagination-bullet {
   background-color: var(--light-color);

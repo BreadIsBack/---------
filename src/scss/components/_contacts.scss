@@ -9,13 +9,17 @@
   }
 
   &__info {
-    margin-right: 83px;
+    margin-right: auto;
   }
 
   &__content {
     display: flex;
-    align-items: flex-start;
     justify-content: center;
+
+    @include small-tablet {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__address {
@@ -70,6 +74,10 @@
       color: var(--orange-color);
       transition: color 0.3s ease-in-out;
     }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__address-text {
@@ -83,6 +91,10 @@
       content: url('../img/contacts/address.svg');;
 
     }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__link-email {
@@ -93,12 +105,21 @@
     &::before {
       content: url('../img/contacts/email.svg');
     }
+
+    @include mobile {
+      font-size: 14px;
+    }
   }
 
   &__descr {
+    margin: 0;
     margin-bottom: 30px;
     max-width: 230px;
     line-height: 137%;
+
+    @include small-tablet {
+      max-width: 100%;
+    }
   }
 
   &__list-social {
@@ -137,14 +158,23 @@
       height: 365px;
       left: -313px;
       bottom: -40px;
+      z-index: -1;
       background-repeat: no-repeat;
       background-size: cover;
       background-image: url('../img/contacts/contacts-img.png');
+
+      @include small-tablet {
+        display: none;
+      }
     }
   }
 
   &__form {
     max-width: 511px;
     padding: 57px;
+
+    @include mobile {
+      padding: 30px;
+    }
   }
 }

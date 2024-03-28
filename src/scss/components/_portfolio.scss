@@ -9,9 +9,23 @@
 
   &__list {
     display: grid;
-    grid-template-columns: repeat(4, 214px);
+    grid-template-columns: repeat(auto-fit, minmax(50px, 214px));
     gap: 44px;
     justify-content: center;
+
+    @include mini-desktop {
+      grid-template-columns: repeat(auto-fit, 150px);
+      gap: 20px;
+    }
+
+    @include small-tablet {
+      grid-template-columns: repeat(auto-fit, 75px);
+      gap: 10px;
+    }
+
+    @include mobile {
+      grid-template-columns: repeat(auto-fit, 50px);
+    }
   }
 
   &__link {
@@ -41,6 +55,13 @@
       position: absolute;
       left: 0;
       bottom: 0;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    @include mobile {
+      display: none;
     }
   }
 }

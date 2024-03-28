@@ -3,6 +3,10 @@
   &__container {
     padding: 40px 100px 65px;
     background-color: var(--orange-color);
+
+    @include mobile {
+      padding: 20px 50px 30px;
+    }
   }
   &__title {
     color: var(--light-color);
@@ -47,6 +51,7 @@
   }
 
   &__btn {
+    padding-right: 35px;
     width: 100%;
     text-align: left;
     position: relative;
@@ -60,12 +65,20 @@
     top: 50%;
     transform: translateY(-50%);
     transition: fill 0.3s ease-in-out;
+
+    @include mobile {
+      width: 15px;
+    }
   }
 
   &__btn-text {
     font-size: 18px;
     font-weight: 700;
     transition: color 0.3s ease-in-out;
+
+    @include mobile {
+      font-size: 12px;
+    }
   }
 
   &__btn-text,

@@ -5,6 +5,10 @@
   &__container {
     padding: 50px 110px;
 
+    @include small-tablet {
+      padding: 30px;
+    }
+
     &--action {
       padding: 0;
       max-width: 595px;
@@ -32,6 +36,11 @@
       width: 21px;
       height: 21px;
       background-image: url('../img/close.svg');
+    }
+
+    @include small-tablet {
+      top: 15px;
+      right: 15px;
     }
   }
 }
