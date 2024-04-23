@@ -25,21 +25,21 @@
     </div>
 
     <div class="hero__request">
-      <form class="hero__form request-form">
+      <form class="hero__form request-form" method="post" action="https://my-json-server.typicode.com/typicode/demo/posts">
         <h2 class="request-form__title">Вызвать замершика на дом</h2>
         <div class="request-form__inner">
           <label class="request-form__label">
-            <input type="text" class="request-form__input" placeholder="Представьтесь, пожалуйста" required>
+            <input type="text" class="request-form__input" placeholder="Представьтесь, пожалуйста" name="Имя" required>
           </label>
           <label class="request-form__label">
-            <input type="tel" class="request-form__input" placeholder="Номер телефона" required>
+            <input type="tel" class="request-form__input" placeholder="Номер телефона" name="Телефон" required>
           </label>
           <label class="request-form__label">
-            <input type="email" class="request-form__input" placeholder="E-mail" required>
+            <input type="email" class="request-form__input" placeholder="E-mail" name="Email" required>
           </label>
           <div class="request-form__checkbox">
             <label class="request-form__label-check">
-              <input type="checkbox" class="request-form__input-check" required>
+              <input type="checkbox" class="request-form__input-check" name="Персональные данные" value="yes" required>
               <p class="request-form__checkbox-text">
                 Согласен на обработку персональных данных в соответствии с <a href="#">политикой конфиденциальности</a>
               </p>

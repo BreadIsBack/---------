@@ -17,6 +17,7 @@ bullets.forEach(bullet => {
 
 const reviewsSlider = new Swiper('.services-modal__swiper', {
   slidesPerView: 1,
+  spaceBetween: 10,
   pagination: {
     el: '.services-modal__pagination',
     clickable: true,
@@ -25,6 +26,7 @@ const reviewsSlider = new Swiper('.services-modal__swiper', {
 
 const productsSlider = new Swiper('.products-swiper', {
   slidesPerView: 1,
+  spaceBetween: 10,
   navigation: {
     prevEl: '.products-swiper__prev',
     nextEl: '.products-swiper__next',
@@ -35,6 +37,7 @@ const productsSlider = new Swiper('.products-swiper', {
 
 const reviewPanelSlider = new Swiper('.review-panel__swiper', {
   slidesPerView: 1,
+  spaceBetween: 10,
   navigation: {
     prevEl: '.review-panel__prev',
     nextEl: '.review-panel__next',
@@ -44,6 +47,7 @@ const reviewPanelSlider = new Swiper('.review-panel__swiper', {
 
 const certificatelSlider = new Swiper('.certificate-panel__swiper', {
   slidesPerView: 1,
+  spaceBetween: 10,
 });
 
 const portfolioSlider = new Swiper('.portfolio__swiper', {
@@ -52,6 +56,7 @@ const portfolioSlider = new Swiper('.portfolio__swiper', {
     prevEl: '.portfolio__btn-prev',
     nextEl: '.portfolio__btn-next',
     clickable: true,
+    spaceBetween: 10,
   },
 });
 
