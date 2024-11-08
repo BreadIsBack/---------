@@ -73,6 +73,14 @@
     display: flex;
   }
 
+  &__map {
+    &--modal {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+    }
+  }
+
   &__swiper {
     margin: 0;
     margin-right: 60px;

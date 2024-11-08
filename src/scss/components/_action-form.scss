@@ -18,6 +18,11 @@
     background-color: var(--light-color);
   }
 
+  &--contacts {
+    max-width: 511px;
+    padding: 57px;
+  }
+
   &__title {
     padding-left: 56px;
     position: relative;
