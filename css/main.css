@@ -1509,6 +1509,11 @@ a {
   display: -ms-flexbox;
   display: flex;
 }
+.portfolio-modal__map--modal {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
 .portfolio-modal__swiper {
   margin: 0;
   margin-right: 60px;
@@ -2184,6 +2189,10 @@ a {
 }
 .action-form--review {
   background-color: var(--light-color);
+}
+.action-form--contacts {
+  max-width: 511px;
+  padding: 57px;
 }
 .action-form__title {
   padding-left: 56px;
